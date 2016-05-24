@@ -14,4 +14,19 @@ describe DockingStation do
 		bike = station.release_bike
 		expect(bike).to be_working
 	end
+
+	it 'should be able to respond to dock method' do
+		expect(subject).to respond_to(:dock).with(1).argument
+	end
+
+	it 'keeps track of stored and released bikes' do
+		expect(subject).to respond_to(:bike)
+	end
+
+	it 'docks a bike' do
+		bike = Bike.new
+		subject.dock(bike)
+		expect(subject.bike).to eq bike
+	end
+
 end
