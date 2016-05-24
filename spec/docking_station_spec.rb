@@ -5,11 +5,13 @@ describe DockingStation do
 		expect(subject).to respond_to(:release_bike)
 	end
 
-	it 'method release_bike gets working bike' do
+	it 'docking station should release a bike' do
 		expect(subject.release_bike).to be_a (Bike)
 	end
 
-	it 'released bike works' do
-		expect(Bike.new).to be_working
+	it 'should release a working bike' do
+		station = DockingStation.new
+		bike = station.release_bike
+		expect(bike).to be_working
 	end
-end 
+end
