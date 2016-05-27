@@ -1,7 +1,7 @@
 require 'bike_containers'
 
 class Garage
-attr_accessor :bikes
+
   include BikeContainer
 
   def accept_bikes(bikes)
