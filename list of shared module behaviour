@@ -1,0 +1,5 @@
+Write down behaviour shared by the DockingStation, Van,
+and Garage classes (e.g. 'they all contain bikes')
+
+- all contain bikes
+- all receive and give bikes
